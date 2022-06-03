@@ -10,7 +10,7 @@
 <b>Gunakan Ubuntu di Termux</b></br>
 <tt># apt-get install git python2</tt></br>
 <tt># pip2 install mechanize requests</tt></br>
-<tt># git clone https://github.com/RoxyMigurdia17/mbf -b mbf</tt></br>
+<tt># git clone https://github.com/RoxyMigurdia17/mbf</tt></br>
 <tt># cd mbf</tt></br>
 <tt># python2 MBF.py</tt></br>
 ......................................</br>
