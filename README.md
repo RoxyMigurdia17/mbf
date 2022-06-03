@@ -19,6 +19,6 @@
 3. Bruteforce From ID Group</br>
 ......</br>
 # NOTE
-Untuk pilihan no. 2 atau ID Group tidak work, gunakan pilihan no. 1 saja
-Dan agar akun fb tidak kena checkpoint jangan login di facebook atau facebook lite
-Login facebook di google chrome atau browser lainnya seperti kiwi browser atau opera mini
+<br>Untuk pilihan no. 2 atau ID Group tidak work, gunakan pilihan no. 1 saja</br>
+<br>Dan agar akun fb tidak kena checkpoint jangan login di facebook atau facebook lite</br>
+<br>Login facebook di google chrome atau browser lainnya seperti kiwi browser atau opera mini</br>
