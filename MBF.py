@@ -250,7 +250,6 @@ def login():
 		keluar()
 	else:
 		cetak('!m[!] Login Gagal')
-def saring_id_group():
 def idgroup():
 	if log != 1:
 		cetak('!h[*] Login !bFB!h dulu bos...')
